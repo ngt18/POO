@@ -1,12 +1,13 @@
 const prompt = require('prompt-sync')();
 
+// Modelo de atributos e funções para criação de um objeto
 class Cliente {
-    nome;
+    nome; 
     idade;
     cpf;
     agencia;
 }
-
+// Objeto que possui as infomações da classe de forma individual
 let cliente = new Cliente();
 
 cliente.nome = prompt("Digite o nome do cliente: ");
