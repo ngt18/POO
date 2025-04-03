@@ -2,16 +2,24 @@ const prompt = require('prompt-sync')();
 
 // Modelo de atributos e funções para criação de um objeto
 class Cliente {
-    #nome; //Atributo
+    // # -> PRIVA O DADO!!!!
+    #nome; //Atributo o
     idade;
     cpf;
     agencia;
 
+    // Retorna uma string com os dados/atributos
+    getDescricao(){
+        return "Nome: "+ this.#nome + ", Idade: "+ this.idade;
+    }
+    
+    //Obtem nome
     get_nome() {
         return this.#nome;
     }
 
-    setNome(value){
+    // Preenche nome
+    setNome(value) {
         this.#nome = value;
     }
 }
@@ -24,4 +32,4 @@ cliente.cpf = '145.226.139-38';
 cliente.agencia = 212129;
 
 console.log(cliente);
-
+console.log(cliente.getDescricao());
